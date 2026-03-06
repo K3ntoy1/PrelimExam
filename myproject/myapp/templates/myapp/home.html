@@ -1,0 +1,18 @@
+{% extends 'myapp/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1>Welcome to My Django Project</h1>
+    {% if user.is_authenticated %}
+        <p>Hello, {{ user.username }}! You are logged in.</p>
+        <div class="auth-links">
+            <a href="{% url 'logout' %}">Logout</a>
+        </div>
+    {% else %}
+        <p>Please log in to access more features.</p>
+        <div class="auth-links">
+            <a href="{% url 'login' %}">Login</a>
+        </div>
+    {% endif %}
+{% endblock %}
