@@ -2,8 +2,9 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: radial-gradient(circle, #ff9a9e 0%, #fecfef 25%, #fecfef 50%, #a18cd1 75%, #fbc2eb 100%);
-    color: #333;
+    /* light green gradient */
+    background: radial-gradient(circle at center, #d0f0c0 0%, #ffffff 60%, #f0f0f0 100%);
+    color: #333333;
     line-height: 1.6;
     min-height: 100vh;
     display: flex;
@@ -15,7 +16,7 @@ body {
     max-width: 800px;
     margin: 50px auto;
     padding: 20px;
-    background: white;
+    background: rgb(87, 92, 0);
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
@@ -47,4 +48,37 @@ a:hover {
 
 .auth-links {
     text-align: center;
+}
+
+/* navigation bar */
+.main-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 10px 0;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+}
+
+.main-nav a {
+    margin: 0 15px;
+    color: #333;
+    font-weight: bold;
+}
+
+.main-nav a:hover {
+    color: #4CAF50;
+}
+
+/* adjust container to account for nav height */
+.container {
+    max-width: 800px;
+    margin: 80px auto 50px; /* added top margin for fixed nav */
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
